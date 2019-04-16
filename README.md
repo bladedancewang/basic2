@@ -57,6 +57,16 @@ basic-security
 │           ├─application.yml    全局配置文件
 │           └─generator.properties   代码生成器，配置文件
 │
+├─basic-provider        dubbo服务提供
+│
+│
+├─basic-consumer        dubbo服务消费
+│
+│
+│
+├─basic-workflow        activiti工作流
+
+
 ```
 
 <br>
