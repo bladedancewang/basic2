@@ -90,19 +90,19 @@ basic-security
 <br>
 
 - Eclipse、IDEA运行AdminApplication.java，则可启动项目【basic-admin】
-- basic-admin访问路径：http://localhost:8080/basic-admin
-- swagger文档路径：http://localhost:8080/basic-admin/swagger/index.html
+- basic-admin访问路径：http://localhost:9090/basic-admin
+- swagger文档路径：http://localhost:9090/basic-admin/swagger/index.html
 - 账号密码：admin/admin
 
 <br>
 
 - Eclipse、IDEA运行ApiApplication.java，则可启动项目【basic-api】
-- basic-api访问路径：http://localhost:8081/basic-api/swagger-ui.html
+- basic-api访问路径：http://localhost:9091/basic-api/swagger-ui.html
 
 <br>
 
 - Eclipse、IDEA运行GeneratorApplication.java，则可启动项目【basic-generator】
-- basic-generator访问路径：http://localhost:8082/basic-generator
+- basic-generator访问路径：http://localhost:9092/basic-generator
 
 
 <br>
