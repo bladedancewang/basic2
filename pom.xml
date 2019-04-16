@@ -20,10 +20,11 @@
         <module>basic-admin</module>
         <module>basic-api</module>
         <module>basic-generator</module>
-    <module>basic-provider</module>
-    <module>basic-workflow</module>
-    <module>basic-consumer</module>
-  </modules>
+        
+        <module>basic-provider</module>
+        <module>basic-workflow</module>
+        <module>basic-consumer</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
