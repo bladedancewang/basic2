@@ -1,0 +1,14 @@
+version: '2'
+services:
+  basic-admin:
+    image: basic/admin
+    ports:
+      - "8080:8080"
+    environment:
+      - spring.profiles.active=dev
+  basic-api:
+    image: basic/api
+    ports:
+      - "8081:8081"
+    environment:
+      - spring.profiles.active=dev

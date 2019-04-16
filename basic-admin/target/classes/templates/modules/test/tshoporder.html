@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>订单中心-订单表</title>
+		<#include "/header.html">
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <div v-show="showList">
+        <div class="grid-btn">
+			<#if shiro.hasPermission("sys:tshoporder:save")>
+            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			</#if>
+			<#if shiro.hasPermission("sys:tshoporder:update")>
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			</#if>
+			<#if shiro.hasPermission("sys:tshoporder:delete")>
+            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+			</#if>
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+
+    <div v-show="!showList" class="panel panel-default">
+        <div class="panel-heading">{{title}}</div>
+        <form class="form-horizontal">
+														                    <div class="form-group">
+                        <div class="col-sm-2 control-label">外部订单id</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="tShopOrder.outOrderId" placeholder="外部订单id"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">用户名</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="tShopOrder.account" placeholder="用户名"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">订单状态（pendingPayment 等待付款 completed 订单已完成）</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="tShopOrder.status" placeholder="订单状态（pendingPayment 等待付款 completed 订单已完成）"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">订单详情json</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="tShopOrder.orderInfo" placeholder="订单详情json"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="tShopOrder.createDate" placeholder="创建时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建人</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="tShopOrder.createBy" placeholder="创建人"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改人</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="tShopOrder.modifyBy" placeholder="修改人"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="tShopOrder.modifyDate" placeholder="修改时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">版本</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="tShopOrder.version" placeholder="版本"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否已删除,0:未删除；1:已删除</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="tShopOrder.isDeleted" placeholder="是否已删除,0:未删除；1:已删除"/>
+                        </div>
+                    </div>
+							            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/test/tshoporder.js?_${.now?long}"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: basic-common
+Implementation-Version: 3.2.0
+Built-By: blade
+Implementation-Vendor-Id: org.basic
+Build-Jdk: 1.8.0_172
+Implementation-URL: http://www.basic.org/basic-common
+Created-By: Maven Integration for Eclipse
+
