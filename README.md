@@ -113,4 +113,7 @@ basic-security
 - 需要配置【basic.shiro.redis=true】，表示把shiro session存到redis里
 
 
-
+ **规划**
+ - 增加dubbo zookeeper分布式微服务支持
+ - 增加activiti支持
+ 
